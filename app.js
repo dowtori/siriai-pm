@@ -166,7 +166,7 @@ function linkBtn(href, label, cls = '') {
 
 // ── STATE ──────────────────────────────────────────────────────
 const State = {
-  view:               'campaigns',  // 'home' | 'campaigns' | 'finance'
+  view:               'home',       // 'home' | 'campaigns' | 'finance'
   selectedClient:     null,         // null = 전체 | '거래처명'
   selectedCampaignId: null,
   filters: {
