@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>SIRIAI · PM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ── LEFT: 사이드바 (200px) ─────────────────────────── -->
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <!-- ── CENTER: 메인 영역 (flex:1) ──────────────────────── -->
+  <div class="main-area">
+    <div class="main-header" id="mainHeader"></div>
+    <div class="main-scroll" id="mainScroll"></div>
+  </div>
+
+  <!-- ── RIGHT: 상세 패널 (0 → 480px push) ─────────────── -->
+  <div class="detail-panel" id="detailPanel"></div>
+
+</div>
+
+<!-- ── STATUS DROPDOWN (global, fixed) ─── -->
+<div id="statusDropdown" class="status-dropdown" style="position:fixed"></div>
+
+<!-- ── PAY DROPDOWN (global, fixed) ─── -->
+<div id="payDropdown" class="pay-dropdown" style="position:fixed"></div>
+
+<!-- ── MODAL ──────────────────────────────────────── -->
+<div class="modal-overlay hidden" id="modalOverlay" onclick="if(event.target===this)Modal.hide()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle"></div>
+      <button class="modal-close" onclick="Modal.hide()">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer" id="modalFooter"></div>
+  </div>
+</div>
+
+<!-- ── TOAST ────────────────────────────────────────── -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ── SCRIPTS ──────────────────────────────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="store.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
